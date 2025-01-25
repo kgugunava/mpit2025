@@ -1,0 +1,69 @@
+body{
+    background-image: url(back.png);
+}
+header{
+    display: flex;
+    justify-content: center;
+    
+}
+#head{
+    text-align: center;
+    font-family: Slackey;
+    font-size: 140px;
+    height: 30px;
+}
+
+ #subhead{
+    height: 60px;
+    
+}
+
+#line{
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 20px;
+}
+p{
+    text-align: center;
+    font-family: Acary;
+    font-size: 20px;
+}
+
+#login{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons, .sub{
+    width: 500px;
+    height: 60px;
+    font-size: 20px;
+    -webkit-appearance: none;
+        -moz-appearance: none;
+            appearance: none;
+    border: 0;
+    border-radius: 40px;
+    background-color: #FFF4EE;
+    outline: none;
+    font-family: Acary;
+    font-size: 20px;
+    /* box-shadow: 2px 2px 5px; */
+    
+}
+.buttons{
+    text-indent: 20px;
+    padding-right: 15px;
+}
+
+
+@font-face {
+     
+    font-family: 'Slackey';
+    src: url(fonts/Slackey-Regular.ttf);
+}
+@font-face {
+     
+    font-family: 'Acary';
+    src: url(fonts/Acari\ Sans\ Black\ Regular.ttf);
+}
