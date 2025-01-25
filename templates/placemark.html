@@ -1,3 +1,4 @@
+{{ define "placemark" }}
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +9,7 @@
         Получить ключ можно в Кабинете разработчика: https://developer.tech.yandex.ru/keys/
     -->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=befdab15-147d-4e67-9cfe-c12861387791" type="text/javascript"></script>
-    <script src="placemark.js" type="text/javascript"></script>
+    <script src="/static/placemark.js" type="text/javascript"></script>
 	<style>
         html, body, #map {
             width: 90%; height: 90%; padding: 0; margin: 0;
@@ -21,3 +22,4 @@
     <button type="button" onclick="pinMark()"> Закрепить метку </button>
 </body>
 </html>
+{{ end }}
