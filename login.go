@@ -21,15 +21,25 @@ type User struct{
 
 var currentUser User
 
+// func saveUsersDataHandle(w http.ResponseWriter, r *http.Request) {
+// 	username := r.FormValue("username")
+// 	password := r.FormValue("password")
+// 	currentUser = User{}
+// 	currentUser.Password = password
+// 	currentUser.Login = username
+// 	addUserToDatabase()	
+// 	http.Redirect(w, r, "/placemark", 301)
+// }
+
 func loginHandle(w http.ResponseWriter, r *http.Request) {
 	tmpl, _ := template.ParseFiles("templates/login.html")
 	tmpl.Execute(w, nil)
-	username := r.FormValue("username")
+	login := r.FormValue("login")
 	password := r.FormValue("password")
 	currentUser = User{}
 	currentUser.Password = password
-	currentUser.Login = username
-	addUserToDatabase()
+	currentUser.Login = login
+	addUserToDatabase()	
 }
 
 func addUserToDatabase() {

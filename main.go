@@ -6,13 +6,13 @@ import (
 )
 
 func placemarkHandle(w http.ResponseWriter, r *http.Request) {
-	tmpl, _ := template.ParseFiles("templates/placemark.html")
+	tmpl, _ := template.ParseFiles("frontend/main.html")
 	tmpl.ExecuteTemplate(w, "placemark", nil)
 }
 
 func main() {
-	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+	http.Handle("/frontend/styles/", http.StripPrefix("/frontend/styles/", http.FileServer(http.Dir("frontend/styles"))))
 	http.HandleFunc("/login", loginHandle)
-	http.HandleFunc("/placemark", placemarkHandle)
+	http.HandleFunc("/main.html", placemarkHandle)
 	http.ListenAndServe(":8050", nil)
 }
