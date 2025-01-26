@@ -52,6 +52,7 @@ function addGeoObject(coords) {
     myGeoObject.events.add('click', function () {
         if (isDelete) {
             myMap.geoObjects.remove(myGeoObject);
+            isDelete = false
         }
     });
 }
