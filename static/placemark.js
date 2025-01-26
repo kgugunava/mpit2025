@@ -1,35 +1,58 @@
 ymaps.ready(init);
 
-function addMark() {
-    myGeoObject = new ymaps.GeoObject({
-        geometry: {
-            type: "Point",
-            coordinates: [56.3269, 44.0059]
-        },
-        properties: {
-        }
-    }, {
-        // Опции.
-        // Иконка метки будет растягиваться под размер ее содержимого.
-        preset: 'islands#blackStretchyIcon',
-        // Метку можно перемещать.
-        draggable: true
-    })
+let myMap;
+let isAddingMark = false;
+let isDelete = false;
 
-    myMap.geoObjects
-    .add(myGeoObject)
+function addMark() {
+    isAddingMark = true;
+    isDelete = false;
 }
 
-function pinMark() {
-    return ;
+function deleteMark() {
+    isAddingMark = false;
+    isDelete = true;
 }
 
 function init() {
-    globalThis.myMap = new ymaps.Map("map", {
+    myMap = new ymaps.Map("map", {
         center: [56.3269, 44.0059],
         zoom: 10,
         controls: [],
     }, {
         suppressMapOpenBlock: true
-    })
+    });
+
+    // Добавляем обработчик клика на карту
+    myMap.events.add('click', function (e) {
+        if (isAddingMark) {
+            const coords = e.get('coords');
+            addGeoObject(coords);
+            isAddingMark = false;
+        }
+    });
+}
+
+function addGeoObject(coords) {
+    const myGeoObject = new ymaps.GeoObject({
+        geometry: {
+            type: "Point",
+            coordinates: coords
+        },
+        properties: {
+            balloonContent: "Координаты: " + coords.join(", ")
+        }
+    }, {
+        preset: 'islands#blackStretchyIcon',
+        draggable: true
+    });
+
+    myMap.geoObjects.add(myGeoObject);
+
+    myGeoObject.events.add('click', function () {
+        if (isDelete) {
+            myMap.geoObjects.remove(myGeoObject);
+            isDelete = false
+        }
+    });
 }
