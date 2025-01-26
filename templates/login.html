@@ -15,11 +15,11 @@
         </header>
         <main>
             <div id = "login">
-                <form >
-                    <p ><input type="text" name="login" placeholder="Логин" class ="buttons"/></p>
-                    <p ><input type="password" name="password" placeholder="Пароль" class ="buttons"/></p>
+                <form action="/login" method="post"> 
+                    <p><input type="text" name="login" placeholder="Логин" class="buttons" required /></p>
+                    <p><input type="password" name="password" placeholder="Пароль" class="buttons" required /></p>
                     <p>
-                        <button type="submit"  formmethod="get" class ="sub" formaction="main.html">Войти</button>
+                        <button type="submit" class="sub">Войти</button>
                     </p>
                 </form>
             </div>

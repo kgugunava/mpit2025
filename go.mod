@@ -1,4 +1,4 @@
-module mpit2025-new
+module mpit2025
 
 go 1.23.3
 

@@ -33,13 +33,18 @@ var currentUser User
 
 func loginHandle(w http.ResponseWriter, r *http.Request) {
 	tmpl, _ := template.ParseFiles("templates/login.html")
-	tmpl.Execute(w, nil)
-	login := r.FormValue("login")
-	password := r.FormValue("password")
-	currentUser = User{}
-	currentUser.Password = password
-	currentUser.Login = login
-	addUserToDatabase()	
+	if r.Method == http.MethodPost {
+        login := r.FormValue("login")
+        password := r.FormValue("password")
+		currentUser = User{}
+		currentUser.Password = password
+		currentUser.Login = login
+		addUserToDatabase()	
+        http.Redirect(w, r, "/main", http.StatusSeeOther)
+        return
+    } else {
+		tmpl.Execute(w, nil)
+	}
 }
 
 func addUserToDatabase() {
