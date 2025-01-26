@@ -1,5 +1,6 @@
 body{
     background: #FCFCF7;
+    height: 1480px;
 }
 p{ 
     font-family:Roboto
@@ -24,7 +25,7 @@ select{
     background-repeat: no-repeat;
     background-position: 97% 50%;
     background-size: 30px;
-    background-image: url("frontend\static\images\loop.png");
+    background-image: url("images/loop.png");
 }
 #username{
     margin-left: 60px;
@@ -32,6 +33,17 @@ select{
 
 #username p{
     text-align: center;
+}
+
+#role{
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 30px;
+}
+#name{
+    margin-top: 0px;
+    font-size: 20px;
 }
 #userphoto{
 
@@ -55,7 +67,7 @@ select{
 }
 
 #map {
-    width: 95%; height: 632px; 
+    width: 95%; height: 623px; 
     
 }
 
@@ -70,25 +82,49 @@ select{
     outline: none;
     border:0;
     color:  #000000;
-    border-radius: 40;
+    border-radius: 30;
     margin-left: 13px;
-    margin-top: 20px;
+    
     border-radius: 20px;
 } 
 
-
-
+.buttonmap:not(#scrol){
+    margin-top: 20px;
+}
+#add{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 45px;
+    background-image: url("images/Plus.svg");
+}
+#delete{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 45px;
+    background-image: url("images/X.svg");
+}
+#scrol{
+    margin-top: 400px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color:#000000;
+    background-size: 30px;
+    background-image: url("images/Arrow\ down.svg");
+}
 
 #scrol{
     margin-bottom: 20px;
 }
 .main{
-    font-size: 40px;
     clear: both;
+    margin-left: 50px;
+    font-size: 40px;
+    float:left;
+    
 }
 
 .buttontable{
-    clear: both;
+
     margin-left:700px;
     width: 200px;
     height: 50px;
@@ -105,22 +141,57 @@ select{
     font-family: Roboto;
     font-size: 20px;
     color:  #FCFCF7;
+    background-repeat: no-repeat;
+    background-position: 97% 50%;
+    background-size: 40px;
+    background-image: url("images/folder.svg");
 }
 
 table{
+    
     margin-top:30px;
-    border: 2px solid #000000;
+    width: 1200px;
+    border: 1px solid #828282;
     margin-left: auto;
     margin-right: auto;
+    font-family:Roboto;
     border-spacing: 10px;
+    border-collapse: collapse;
 }
-tr {
-    border: 1px solid #000000;  /* границы между строками */
+
+th {
+    border-left: 1px solid #292929;  
+    padding: 18px 18px;
+    border-right: 1px solid #292929;  
+    border-top: 1px solid #292929;  
+    font-size: 15px;
+    background-color:#ACACAC;
+
 } 
 
 td{
-    font-family:Roboto;
-    font-size: 27px;
+    border: 1px solid #828282 ;
+    font-size: 20px;
+    padding: 15px 15px;
+    text-align: center;
+}
+
+.tdbutton
+{
+    clear: both;
+    -webkit-appearance: none;
+        -moz-appearance: none;
+            appearance: none;
+    width: 50px;
+    height: 50px;
+    background-color:#ACACAC;
+    outline: none;
+    border:0;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 40px;
+    background-image: url("images/spec.svg");
 }
 @font-face {
     font-family: 'Roboto';

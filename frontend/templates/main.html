@@ -2,14 +2,14 @@
 <html>
 <head>
     <title> Логин</title>
-    <link rel="stylesheet" href="frontend\static\styles\main.css" />
+    <link rel="stylesheet" href="styles/main.css" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=befdab15-147d-4e67-9cfe-c12861387791" type="text/javascript"></script>
     <script src="static/placemark.js" type="text/javascript"></script>
 </head>
 <body>
     <div class="head">
-        <div><img src="images/logotype.png" id = "logo" alt="лого" /></div>
+        <div><img src="styles/images/logotype.png" id = "logo" alt="лого" /></div>
         <div>
             <form >
                 <p>
@@ -27,14 +27,17 @@
                 </p>
             </form>
         </div>
-        <div id = "username"><p>Admin<br/>Никита Сюхин</p></div>
-        <div ><img src="images/user.png" id = "userphoto" alt="фото" /></div>
+        <div id = "username">
+            <p id ="role">Admin</p>
+            <p id  ="name">Никита Сюхин</p>
+        </div>
+        <div ><img src="styles/images/user.png" id = "userphoto" alt="фото" /></div>
     </div>
     <div id ="mappa">
         <div id ="sitebar">
-            <button type="button" onclick="deleteMark()"class="buttonmap" id ="delete"></button>
             <button type="button" onclick="addMark()" class="buttonmap" id ="add"></button> 
-            <button type="button" onclick="addMark()" class="buttonmap" id ="scrol"></button> 
+            <button type="button" onclick="deleteMark()"class="buttonmap" id ="delete"></button>
+            <button type="button" onclick="scrollMark()" class="buttonmap" id ="scrol"></button> 
         </div> 
         <div id="map"></div>
     </div>
@@ -43,10 +46,13 @@
             
         <button type="button" onclick="" class="buttontable">Экспорт</button> 
         </p>
+
         <table>
         <tr>
-            <td>Номер</td> <td>Адрес</td> <td>Геопозиция</td> <td>Название</td> <td>Владелец</td> <td>Провайдер</td> <td>Свободные слоты</td> <td>Состояние</td> <td>Спецификация</td>
-            
+            <th>Номер</th> <th>Адрес</th> <th>Геопозиция</th> <th>Маркировка</th> <th>Владелец</th> <th>Провайдер</th> <th>Свободные слоты</th> <th>Состояние</th> <th>Спецификация</th>
+        </tr>
+        <tr>
+            <td>1</td> <td>Политбойцов</td> <td>56.260077, 43.882685</td> <td>Рсш-2</td> <td>РосСети</td> <td>Ростелеком</td> <td>2 слота</td> <td>Работоспособна</td> <td><button type="button" onclick="" class="tdbutton" id ="spec"></button> </td>
         </tr>
         </table>
     </div>
