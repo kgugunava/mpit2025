@@ -1,0 +1,77 @@
+body{
+    background: #FCFCF7;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+#head{
+    text-align: center;
+    font-family: Slackey;
+    font-size: 140px;
+    color: transparent;    
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-top: 100px;
+    margin-bottom: 0;
+    background-image: linear-gradient(135deg, #FE9307, #A856EA);
+}
+
+#subhead{
+    margin-top: 0;
+    height: 60px;
+    
+}
+
+p{
+    text-align: center;
+    font-family: Roboto;
+    font-size: 20px;
+}
+
+#login{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons, .sub{
+    width: 500px;
+    height: 60px;
+    font-size: 20px;
+    -webkit-appearance: none;
+        -moz-appearance: none;
+            appearance: none;
+    border: 0;
+    border-radius: 40px;
+    background-color:#D1D1D6;
+    outline: none;
+    font-family: Roboto;
+    font-size: 20px;
+    color: #000000;
+    /* box-shadow: 2px 2px 5px; */
+    
+}
+
+.sub{
+    color: #FCFCF7;
+    background-color: #292929;
+}
+
+.buttons{
+    text-indent: 20px;
+    padding-right: 15px;
+}
+
+@font-face {
+     
+    font-family: 'Slackey';
+    src: url(fonts/Slackey-Regular.ttf);
+}
+
+@font-face {
+     
+    font-family: 'Roboto';
+    src: url(fonts/Roboto.ttf);
+}

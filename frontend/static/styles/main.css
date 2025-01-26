@@ -1,0 +1,128 @@
+body{
+    background: #FCFCF7;
+}
+p{ 
+    font-family:Roboto
+}
+#logo{ 
+    width: 65pх;   
+    height: 65px;    
+}
+select{
+    margin-left: 60px;
+    margin-top: 0px;
+    -webkit-appearance: none;
+        -moz-appearance: none;
+            appearance: none;
+    width: 800px;
+    height: 50px;
+    border-radius: 30px;
+    background-color:#FCFCF7;
+    border: 1px solid #000000;
+    font-size: 20px;
+    text-indent: 20px;
+    background-repeat: no-repeat;
+    background-position: 97% 50%;
+    background-size: 30px;
+    background-image: url("frontend\static\images\loop.png");
+}
+#username{
+    margin-left: 60px;
+}
+
+#username p{
+    text-align: center;
+}
+#userphoto{
+
+    margin-left:20px;
+    height: 85px;
+    width: 85pх; 
+}
+.head div{
+    float: left;
+}
+#mappa{
+    clear: both;
+}
+#sitebar
+{
+    margin-left:95%;
+    width: 5%;
+    height: 590px;
+    background-color:#FCFCF7;
+    float:right;
+}
+
+#map {
+    width: 95%; height: 632px; 
+    
+}
+
+.buttonmap{
+    clear: both;
+    -webkit-appearance: none;
+        -moz-appearance: none;
+            appearance: none;
+    width: 50px;
+    height: 50px;
+    background-color:#000000;
+    outline: none;
+    border:0;
+    color:  #000000;
+    border-radius: 40;
+    margin-left: 13px;
+    margin-top: 20px;
+    border-radius: 20px;
+} 
+
+
+
+
+#scrol{
+    margin-bottom: 20px;
+}
+.main{
+    font-size: 40px;
+    clear: both;
+}
+
+.buttontable{
+    clear: both;
+    margin-left:700px;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    text-align: left;
+    text-indent: 20px;
+    -webkit-appearance: none;
+        -moz-appearance: none;
+            appearance: none;
+    border: 0;
+    border-radius: 40px;
+    background-color:#000000 ;
+    outline: none;
+    font-family: Roboto;
+    font-size: 20px;
+    color:  #FCFCF7;
+}
+
+table{
+    margin-top:30px;
+    border: 2px solid #000000;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 10px;
+}
+tr {
+    border: 1px solid #000000;  /* границы между строками */
+} 
+
+td{
+    font-family:Roboto;
+    font-size: 27px;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/Roboto.ttf);
+}
