@@ -1,5 +1,5 @@
 body{
-    background-image: url(back.png);
+    background: #FCFCF7;
 }
 header{
     display: flex;
@@ -13,10 +13,11 @@ header{
     height: 30px;
 }
 
- #subhead{
+#subhead{
     height: 60px;
     
 }
+
 
 #line{
     display: flex;
@@ -24,9 +25,10 @@ header{
     width: 500px;
     height: 20px;
 }
+
 p{
     text-align: center;
-    font-family: Acary;
+    font-family: Roboto;
     font-size: 20px;
 }
 
@@ -44,12 +46,18 @@ p{
             appearance: none;
     border: 0;
     border-radius: 40px;
-    background-color: #FFF4EE;
+    background-color:#D1D1D6;
     outline: none;
-    font-family: Acary;
+    font-family: Roboto;
     font-size: 20px;
+    color: #000000;
     /* box-shadow: 2px 2px 5px; */
     
+}
+
+.sub{
+    color: #FCFCF7;
+    background-color: #292929;
 }
 .buttons{
     text-indent: 20px;
@@ -62,6 +70,6 @@ p{
 }
 @font-face {
      
-    font-family: 'Acary';
-    src: url(fonts/Acari\ Sans\ Black\ Regular.ttf);
+    font-family: 'Roboto';
+    src: url(fonts/Roboto.ttf);
 }

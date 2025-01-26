@@ -12,17 +12,17 @@
         <div><img src="images/logotype.png" id = "logo" alt="лого" /></div>
         <div>
             <form >
-                <select name="dist" id="select-dist">
-                    <option disabled selected>Поиск опор</option>
-                    <option value="Avtozavod">Автозаводский район</option>
-                    <option value="Nizegorod">Нижегородский район</option>
-                    <option value="Leninsk">Ленинский район</option>
-                    <option value="Sormovo">Сормовский район</option>
-                    <option value="Kanavino">Канавинский район</option>
-                    <option value="Sovetsk">Советский район</option>
-                    <option value="Prioksk">Приокский район</option>
-                    <option value="Moscow">Московский район</option>
-                </select>
+                    <select name="dist" id="select-dist">
+                        <option disabled selected>Поиск опор</option>
+                        <option value="Avtozavod">Автозаводский район</option>
+                        <option value="Nizegorod">Нижегородский район</option>
+                        <option value="Leninsk">Ленинский район</option>
+                        <option value="Sormovo">Сормовский район</option>
+                        <option value="Kanavino">Канавинский район</option>
+                        <option value="Sovetsk">Советский район</option>
+                        <option value="Prioksk">Приокский район</option>
+                        <option value="Moscow">Московский район</option>
+                    </select>
             </form>
         </div>
         <div id = "username"><p>Admin<br/>Никита Сюхин</p></div>
@@ -30,12 +30,13 @@
     </div>
     <div id ="mappa">
         <div id="map"></div>
-        <button type="button" onclick="deleteMark()"class="buttonmap"> Удалить метку </button>
-        <button type="button" onclick="addMark()" class="buttonmap"> Добавить метку </button> 
+        <button type="button" onclick="deleteMark()"class="buttonmap" id ="rightbuttonmap"> Удалить метку </button>
+        <button type="button" onclick="addMark()" class="buttonmap" id ="leftbuttonmap"> Добавить метку </button> 
     </div>
     <div id ="table">
         <p class = "main">Информация об опорах
-        <button type="button" onclick="" class="buttontable"><p>Экспорт</p></button> 
+            
+        <button type="button" onclick="" class="buttontable">Экспорт</button> 
         </p>
         <table>
         <tr>
